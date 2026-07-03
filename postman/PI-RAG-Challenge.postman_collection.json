@@ -1,0 +1,150 @@
+{
+  "info": {
+    "name": "PI RAG Challenge",
+    "_postman_id": "ac5d6d5d-1111-4444-8888-abcdef123456",
+    "description": "Coleccion final para validar la API RAG del challenge. Incluye healthcheck, reindexacion y preguntas funcionales en espanol, ingles y portugues. La API fue documentada para demostrar determinismo, control del idioma, tercera persona, una sola oracion y emojis consistentes.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8000"
+    }
+  ],
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "description": "Verifica si la API esta arriba y responde correctamente.",
+        "url": {
+          "raw": "{{baseUrl}}/health",
+          "host": ["{{baseUrl}}"],
+          "path": ["health"]
+        }
+      }
+    },
+    {
+      "name": "Reindex",
+      "request": {
+        "method": "POST",
+        "description": "Reconstruye la coleccion vectorial a partir del documento fuente.",
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/admin/reindex",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "v1", "admin", "reindex"]
+        }
+      }
+    },
+    {
+      "name": "Ask Zara ES",
+      "request": {
+        "method": "POST",
+        "description": "Prueba en espanol sobre el personaje Zara.",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"user_name\": \"John Doe\",\n  \"question\": \"Quien es Zara?\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/ask",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "v1", "ask"]
+        }
+      }
+    },
+    {
+      "name": "Ask Emma EN",
+      "request": {
+        "method": "POST",
+        "description": "Prueba en ingles sobre la decision final de Emma.",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"user_name\": \"John Doe\",\n  \"question\": \"What did Emma decide to do?\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/ask",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "v1", "ask"]
+        }
+      }
+    },
+    {
+      "name": "Ask Magical Flower EN",
+      "request": {
+        "method": "POST",
+        "description": "Prueba en ingles sobre el nombre de la flor magica.",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"user_name\": \"John Doe\",\n  \"question\": \"What is the name of the magical flower?\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/ask",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "v1", "ask"]
+        }
+      }
+    },
+    {
+      "name": "Ask Alex EN",
+      "request": {
+        "method": "POST",
+        "description": "Prueba en ingles sobre Alex y el escenario distopico.",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"user_name\": \"John Doe\",\n  \"question\": \"Who is Alex?\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/ask",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "v1", "ask"]
+        }
+      }
+    },
+    {
+      "name": "Ask Flower PT",
+      "request": {
+        "method": "POST",
+        "description": "Prueba en portugues sobre la flor magica.",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"user_name\": \"John Doe\",\n  \"question\": \"Qual e o nome da flor magica?\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/ask",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "v1", "ask"]
+        }
+      }
+    }
+  ]
+}

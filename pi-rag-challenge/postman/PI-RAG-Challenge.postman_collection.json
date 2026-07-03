@@ -1,0 +1,56 @@
+{
+  "info": {
+    "name": "PI RAG Challenge",
+    "_postman_id": "ac5d6d5d-1111-4444-8888-abcdef123456",
+    "description": "Coleccion para probar la API del challenge.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8000/health",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["health"]
+        }
+      }
+    },
+    {
+      "name": "Reindex",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "http://localhost:8000/api/v1/admin/reindex",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "v1", "admin", "reindex"]
+        }
+      }
+    },
+    {
+      "name": "Ask",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"user_name\": \"John Doe\",\n  \"question\": \"Quien es Zara?\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/v1/ask",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "v1", "ask"]
+        }
+      }
+    }
+  ]
+}
