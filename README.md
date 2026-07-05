@@ -493,7 +493,6 @@ Si se desea correr pruebas:
 ```powershell
 pytest
 ```
-
 ## 18. Orden del repo antes de entregar
 
 Antes del push final:
