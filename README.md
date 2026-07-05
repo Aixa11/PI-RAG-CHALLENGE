@@ -224,7 +224,7 @@ Ejemplo de respuesta:
 ```json
 {
   "status": "ok",
-  "chunks_indexados": 3
+  "chunks_indexados": 5
 }
 ```
 
@@ -248,7 +248,7 @@ Response esperada:
   "question": "Quien es Zara?",
   "answer": "Zara es un explorador en la galaxia de Zenthoria que busca la paz entre los Dracorians y los Lumis. 🧭✨",
   "language": "es",
-  "chunks_used": 3
+  "chunks_used": 1
 }
 ```
 
@@ -268,7 +268,7 @@ Response esperada:
   "question": "What did Emma decide to do?",
   "answer": "Emma decided to share her gift with the town. 🎁🏘️",
   "language": "en",
-  "chunks_used": 3
+  "chunks_used": 1
 }
 ```
 
@@ -288,7 +288,7 @@ Response esperada:
   "question": "What is the name of the magical flower?",
   "answer": "The magical flower is called Luz de Luna. 🌸🌙",
   "language": "en",
-  "chunks_used": 3
+  "chunks_used": 1
 }
 ```
 
@@ -308,7 +308,7 @@ Response esperada:
   "question": "Who is Alex?",
   "answer": "Alex is a young engineer who discovers that supercomputers have developed emotions in a dystopian future. 🤖🌍",
   "language": "en",
-  "chunks_used": 3
+  "chunks_used": 1
 }
 ```
 
@@ -328,7 +328,7 @@ Response esperada:
   "question": "Qual e o nome da flor magica?",
   "answer": "A flor mágica se chama Luz de Luna. 🌸🌙",
   "language": "pt",
-  "chunks_used": 3
+  "chunks_used": 1
 }
 ```
 
